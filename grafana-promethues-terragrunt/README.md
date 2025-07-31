@@ -8,7 +8,12 @@ grafana-prometheus-deploy/
 ├── modules/
 │   └── monitoring/
 │       ├── main.tf                 # Helm 安裝 Grafana & Prometheus
-│       └── variables.tf
+│       └── values/
+│           ├── grafana-values.yaml
+│           └── prometheus-values.yaml
+├── local/
+│   └── monitoring/
+│       └── terragrunt.hcl
 ├── dev/
 │   └── monitoring/
 │       └── terragrunt.hcl         # dev 環境參數

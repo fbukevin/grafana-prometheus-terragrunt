@@ -7,5 +7,5 @@ include {
 }
 
 inputs = {
-  grafana_admin_password = "prodStrongPass!"
+  grafana_admin_password = "admin"
 }
