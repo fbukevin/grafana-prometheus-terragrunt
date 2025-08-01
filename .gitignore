@@ -1,2 +1,4 @@
 *.terragrunt-cache*
 local/monitoring/.terraform.lock.hcl
+
+.DS_Store
