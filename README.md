@@ -48,3 +48,19 @@ Grafana: http://localhost:32000/login
 ```sh
 terragrunt destroy
 ```
+
+❌ If destroy trigger the re-creation
+
+```sh
+$ helm list -A
+NAME      	NAMESPACE 	REVISION	UPDATED  	STATUS  	CHART  	APP VERSION
+grafana   	monitoring	1  	2025-07-31 17:06:00.30525 +0700 +07 	deployed	grafana-7.3.0     	10.3.1
+prometheus	monitoring	1  	2025-07-31 17:06:01.304405 +0700 +07	deployed	prometheus-25.21.0	v2.52.0
+```
+
+And then 
+```sh
+$ helm uninstall grafana prometheus -n monitoring
+release "grafana" uninstalled
+release "prometheus" uninstalled
+```
